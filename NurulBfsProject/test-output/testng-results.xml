@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20273" started-at="2016-02-02T03:12:17Z" finished-at="2016-02-02T03:12:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20273" started-at="2016-02-02T03:12:17Z" finished-at="2016-02-02T03:12:38Z">
+      <class name="com.ebfs.pages.SmokeTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.ebfs.pages.SmokeTest@337d0578]" name="beforeTest" is-config="true" duration-ms="277" started-at="2016-02-01T22:12:17Z" finished-at="2016-02-01T22:12:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.ebfs.pages.SmokeTest@337d0578]" name="openBrowser" is-config="true" duration-ms="9330" started-at="2016-02-01T22:12:18Z" finished-at="2016-02-01T22:12:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="registerNewAccount()[pri:0, instance:com.ebfs.pages.SmokeTest@337d0578]" name="registerNewAccount" duration-ms="9423" started-at="2016-02-01T22:12:27Z" finished-at="2016-02-01T22:12:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerNewAccount -->
+        <test-method status="PASS" signature="closeBroser(org.testng.ITestResult)[pri:0, instance:com.ebfs.pages.SmokeTest@337d0578]" name="closeBroser" is-config="true" duration-ms="201" started-at="2016-02-01T22:12:36Z" finished-at="2016-02-01T22:12:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerNewAccount status=SUCCESS method=SmokeTest.registerNewAccount()[pri:0, instance:com.ebfs.pages.SmokeTest@337d0578] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBroser -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.ebfs.pages.SmokeTest@337d0578]" name="afterTest" is-config="true" duration-ms="1021" started-at="2016-02-01T22:12:37Z" finished-at="2016-02-01T22:12:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.ebfs.pages.SmokeTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
