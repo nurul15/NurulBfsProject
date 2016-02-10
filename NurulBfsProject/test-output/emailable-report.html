@@ -1,2 +1,55 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Default suite</th></tr><tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">20,273</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.ebfs.pages.SmokeTest</td><td><a href="#m0">registerNewAccount</a></td><td rowspan="1">1454382747473</td><td rowspan="1">9423</td></tr></tbody></table><h2>Default test</h2><h3 id="m0">com.ebfs.pages.SmokeTest#registerNewAccount</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Default suite</th></tr><tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">8,903</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.ebfs.pages.SmokeTest</td><td><a href="#m0">afterTest</a></td><td rowspan="1">1455085634455</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.ebfs.pages.SmokeTest</td><td><a href="#m1">productQuickView</a></td><td rowspan="1">1455085633429</td><td rowspan="1">780</td></tr></tbody></table><h2>Default test</h2><h3 id="m0">com.ebfs.pages.SmokeTest#afterTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Command duration or timeout: 281 milliseconds
+Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:55:52&apos;
+System info: host: &apos;Nurul&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e8a18b6a-d0ed-463e-bc0b-bca164277fcf
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:311)
+	at com.ebfs.pages.SmokeTest.afterTest(SmokeTest.java:311)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.afterRun(TestRunner.java:1027)
+	at org.testng.TestRunner.run(TestRunner.java:627)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:55:52&apos;
+System info: host: &apos;Nurul&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.nsCommandProcessor.prototype.execute(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12602)
+	at &lt;anonymous class&gt;.Dispatcher.executeAs/&lt;(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9455)
+	at &lt;anonymous class&gt;.Resource.prototype.handle(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9602)
+	at &lt;anonymous class&gt;.Dispatcher.prototype.dispatch(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9549)
+	at &lt;anonymous class&gt;.WebDriverServer/&lt;.handle(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:12390)
+	at &lt;anonymous class&gt;.createHandlerFunc/&lt;(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
+	at &lt;anonymous class&gt;.ServerHandler.prototype.handleResponse(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
+	at &lt;anonymous class&gt;.Connection.prototype.process(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
+	at &lt;anonymous class&gt;.RequestReader.prototype._handleResponse(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
+	at &lt;anonymous class&gt;.RequestReader.prototype._processBody(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
+	at &lt;anonymous class&gt;.RequestReader.prototype.onInputStreamReady(file:///C:/Users/Aminn/AppData/Local/Temp/anonymous7432859207725101971webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1393)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">com.ebfs.pages.SmokeTest#productQuickView</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

@@ -17,6 +17,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -29,6 +30,8 @@ public class SmokeTest {
 	ExtentTest logger;
 
 	WebDriver driver;
+	WebDriver Action;
+	
 	
 	
   @BeforeTest
@@ -43,12 +46,14 @@ public class SmokeTest {
 	  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	  driver.manage().window().maximize();
   }
-   @Test (enabled = false)//*******1.1 BruteForce the power of choice..... Logo should be visible to all users.******
+   @Test (enabled = false)//1.1 BruteForce the power of choice..... Logo should be visible to all users.
    public void bruteforceLogo(){
+	   logger= report.startTest("Verifying BruteForce Logo");
+		  HomePage homePage= new HomePage(driver);
+		  logger.log(LogStatus.INFO,"Wrong Logo Is Displayed");
+		  Assert.assertEquals(true, false);
    }
-   
-   
-  @Test (enabled= false)//1.2 Verify womenn Tab 
+  @Test (enabled= false)//1.2 Verify women Tab 
   public void womenOptionsTab (){
 	  logger= report.startTest("Verifying Womens Tab");
 	  HomePage homePage= new HomePage(driver);
@@ -67,7 +72,7 @@ public class SmokeTest {
 	  homePage.dressesSection();
 	  DressesPage dressesPage = new DressesPage(driver);
 	  logger.log(LogStatus.INFO,"Verify Dresses Tab Opened");
-	  Assert.assertEquals(dressesPage.dressesPageTitle(), "DRESSES");
+	  Assert.assertEquals(dressesPage.dressesPageTitle(), "DRESSES ");
   }
   @Test (enabled= false)//1.2 Verify T-shirts Tab 
   public void tshirtsOptionsTab (){
@@ -77,16 +82,16 @@ public class SmokeTest {
 	  homePage.tshirtsSection();
 	  TshirtsPage tshirtsPage = new TshirtsPage(driver);
 	  logger.log(LogStatus.INFO,"Verify T-shirts Tab Opened");
-	  Assert.assertEquals(tshirtsPage.tshirtsPageTitle(), "T-SHIRTS");	  
+	  Assert.assertEquals(tshirtsPage.tshirtsPageTitle(), "T-SHIRTS ");	  
   }
-  @Test (enabled= false)//******1.2 Verify BruteForceTab ----DOES NOT CHANGE WINDOWS*********
-  //**********STILL NEEDS WORK*********
+  @Test (enabled= false)//1.2 Verify BruteForceTab 
+  //**********driver.switchTo().window("Welcome to the BruteForce!"); DID NOT WORK*********
   public void bruteforceOptionsTab (){
 	  logger= report.startTest("Verifying BruteForce Tab");
 	  HomePage homePage = new HomePage(driver);
 	  logger.log(LogStatus.INFO,"BruteForce Tab Clicked");
 	  homePage.bruteforceSection();
-	  
+
 	  BruteForcePage bruteforcePage  = new BruteForcePage(driver);
 	  logger.log(LogStatus.INFO,"Verify BruteForce Tab Opened");
 	  Assert.assertEquals(bruteforcePage.bruteForcePageLogo(), true);
@@ -108,21 +113,29 @@ public class SmokeTest {
 	  logger= report.startTest("Feature Products Visibility");
 	  HomePage homePage = new HomePage(driver);
 	  Assert.assertEquals(homePage.featureProducts(), true);  
+	  logger.log(LogStatus.PASS, "Featured Products Visible to Users");
   }
-  @Test (enabled = false) //  1.5 Checkout Cart should be visible to users with Empty.
+  @Test (enabled =false) //  1.5 Checkout Cart should be visible to users with Empty.
   public void emptyCartVisible(){
 	  logger= report.startTest("Empty Checkout Cart Visibility");
 	  HomePage homePage = new HomePage(driver);
 	  Assert.assertEquals(homePage.emptyVisibleCart(), "(empty)"); 
+	  logger.log(LogStatus.PASS, "Checkout is Displayed with Empty");
   }
   
   
   
-  @Test (enabled = false)//*******1.6 User should be able to view the product details layer by clicking quick view link.******
+  @Test (enabled = true)//*******1.6 User should be able to view the product details layer by clicking quick view link.******
   public void productQuickView(){
+	  logger= report.startTest("View Product Detail via Quick View");
+	  HomePage homePage = new HomePage(driver);
+	  
   }
   @Test (enabled = false)//*******1.7 User should be able to add the product to wish list from product details layer.******
   public void addWishList(){
+	  logger= report.startTest("Adding to Wish List");
+	  HomePage homePage = new HomePage(driver);
+	  
   }
   
   
@@ -161,11 +174,11 @@ public class SmokeTest {
 	  logger.log(LogStatus.PASS, "Able to Filter by Popular or Bestseller");
   }
   @Test (enabled =false) //1.1.2 User should be subscribe/unsubscribe for Upcoming newsletter.
-  //***MUST USE DIFFERENT EMAIL EACH TIME, CHANGE IT OVER AT HOMEPAGE UNDER "subNewsletter" METHOD***
+  //***MUST USE DIFFERENT EMAIL EACH TIME***
   public void subscribeNewsletter(){
 	  logger= report.startTest("Subscribing to NewsLetters");
 	  HomePage homePage = new HomePage(driver);
-	  homePage.subNewsletter();
+	  homePage.subNewsletter("7@mail.com");
 	  Assert.assertEquals(homePage.subscribeVerify(), "Newsletter : You have successfully subscribed to this newsletter.");
 	  logger.log(LogStatus.PASS, "Users able to Subscribe");
   }
@@ -179,13 +192,13 @@ public class SmokeTest {
  }
  
  @Test (enabled =false)//1.1.4 User should be presented to follow us on Facebook link
- //***STILL NEEDS WORK***
+ //***WRONG FACEBOOK LINK OPENS***
  public void followOnFacebook(){
-	 logger= report.startTest("Following on Fcaebook");
+	 logger= report.startTest("Following on Facebook");
 	 HomePage homePage = new HomePage(driver);
 	 homePage.facebookFollow(); 
  }
- @Test (enabled = true)// 1.1.5 User should be able to register by clicking Login link
+ @Test (enabled = false)// 1.1.5 User should be able to register by clicking Login link
  public void registerNewAccount() {
 	  logger = report.startTest("Register New Account");
 	  HomePage homePage = new HomePage(driver);
@@ -194,7 +207,7 @@ public class SmokeTest {
 	  SignInPage signInPage = new SignInPage(driver);
 	  Assert.assertEquals(signInPage.createAccountTitle(), "CREATE AN ACCOUNT");
 	  logger.log(LogStatus.INFO,"Input Valid Email");
-	  signInPage.createNewAccount("14@gmail.com");
+	  signInPage.createNewAccount("16@gmail.com");
 	  AccountPage accountPage = new AccountPage (driver);
 	  logger.log(LogStatus.INFO,"Verify Account Page Displayed");
 	  Assert.assertEquals(accountPage.personalInfo(),"YOUR PERSONAL INFORMATION");
@@ -206,65 +219,7 @@ public class SmokeTest {
 	  Assert.assertEquals(accountPage.verifyName(),"Nurul Amin");
  }
   
-//  @Test (enabled =false) //Test Case 1
-//  public void createInvalidEmail() {
-//	  logger = report.startTest("Invalid Email Account Creation");
-//	  HomePage homePage = new HomePage(driver);
-//	  logger.log(LogStatus.INFO,"Sign In Clicked");
-//	  homePage.clickSignIn();
-//	
-//	  SignInPage signInPage = new SignInPage(driver);
-//	  Assert.assertEquals(signInPage.createAccountTitle(), "CREATE AN ACCOUNT");
-//	  logger.log(LogStatus.INFO,"Input Invalid Email");
-//	  signInPage.createNewAccount("nurul");
-//	  logger.log(LogStatus.INFO,"Display Invalid Email Error");
-//	  signInPage.invalidEmail();
-//	  logger.log(LogStatus.PASS, "Invalid Email  Entered & Verified ERROR ALERT");
-//  }
-  
-//  @Test (enabled =false) //Test Case 2
-//  public void alreadyRegistered() {
-//	  logger = report.startTest("Already Registered Account");
-//	  HomePage homePage = new HomePage(driver);
-//	  logger.log(LogStatus.INFO,"Sign In Clicked");
-//	  homePage.clickSignIn();
-//	  
-//	  SignInPage signInPage = new SignInPage(driver);
-//	  Assert.assertEquals(signInPage.createAccountTitle(), "CREATE AN ACCOUNT");
-//	  logger.log(LogStatus.INFO,"Input Registered Email");
-//	  signInPage.createNewAccount("rabbani@rabbani.com");
-//	  logger.log(LogStatus.INFO,"Display Registered Email Error");
-//	  signInPage.registeredEmail();
-//	  logger.log(LogStatus.PASS,"Registered Email ALERT verified");
-//	
-//  }
-//  
-//  @Test (enabled = false)//Test Case 3
-//  public void createNewAccount() {
-//	
-//	  logger = report.startTest("Create New Account");
-//	  HomePage homePage = new HomePage(driver);
-//	  logger.log(LogStatus.INFO,"Sign In Clicked");
-//	  homePage.clickSignIn();
-//	  
-//	  SignInPage signInPage = new SignInPage(driver);
-//	  Assert.assertEquals(signInPage.createAccountTitle(), "CREATE AN ACCOUNT");
-//	  logger.log(LogStatus.INFO,"Input Valid Email");
-//	  signInPage.createNewAccount("13@gmail.com");
-//	  
-//	  AccountPage accountPage = new AccountPage (driver);
-//	  logger.log(LogStatus.INFO,"Verify Account Page Displayed");
-//	  Assert.assertEquals(accountPage.personalInfo(),"YOUR PERSONAL INFORMATION");
-//	  logger.log(LogStatus.INFO,"Filling Our Personal Info");
-//	  accountPage.fillOutInfo("Nurul","Amin","password");
-//	  logger.log(LogStatus.INFO,"Verifying Account Creation");
-//	  Assert.assertEquals(accountPage.verifyCreated(),"Your account has been created.");
-//	  logger.log(LogStatus.INFO,"Verifying Account Name");
-//	  Assert.assertEquals(accountPage.verifyName(),"Nurul Amin");
-//	  accountPage.updateLastName();
-//	  Assert.assertEquals(accountPage.verifyLastNameUpdate(),"Nurul Doe");
-//	  logger.log(LogStatus.PASS, "New Account Creation Success");
-//  }
+
   
   
   @AfterMethod
@@ -287,7 +242,7 @@ public class SmokeTest {
 		report.endTest(logger);
 		report.flush();
 		
-//		driver.close();
+		//driver.close();
 
 		
   }
